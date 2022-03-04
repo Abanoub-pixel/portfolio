@@ -1,7 +1,7 @@
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
 import './contact.scss'
-
+import img from "../../assets/shake.svg"
 export default function Contact() {
   const [message, setMessage] = useState(false)
   const handleSubmit = (e) => {
@@ -16,7 +16,7 @@ export default function Contact() {
   return (  
     <div className='contact' id='contact'>
       <div className="left">
-      <img src="assets/shake.svg" alt="" />
+      <img src={img} alt="" />
       </div>
       <div className="right">
         <h2>Contact.</h2>

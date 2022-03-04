@@ -1,29 +1,29 @@
 import './works.scss'
-import {useState} from 'react'
+import { useState } from 'react'
+import icon1 from '../../assets/mobile.png'
+import img1 from '../../assets/arrow.png'
+import img2 from '../../assets/arrow.png'
 export default function Works() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const data = [
     {
       id: "1",
-      icon: "./assets/mobile.png",
-      title: "Pro Shop",
+      title: "Watches App",
       desc:
-        "E-Commerce React web application that you can buy anything you want, and any time",
+        " you can buy any watch you want, and any time in a smooth way. You will find more down below.",
       img:
-        "assets/s.png",
+        "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=394&q=80",
     },
     {
       id: "2",
-      icon: "./assets/globe.png",
-      title: "Wheather App",
+      title: "Education App",
       desc:
-        "Weather React app that is forecasting the temperature for you anywhere.",
+        "You can find your expert tutor easily from anywhere. For more information scroll to down below.",
       img:
-        "assets/preview.png",
+        "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=932&q=80",
     },
     {
       id: "3",
-      icon: "./assets/writing.png",
       title: "More Info",
       desc:
         "You can find more info in the section below.",
@@ -45,7 +45,7 @@ export default function Works() {
               <div className="left">
                 <div className="leftContainer">
                   <div className="imgContainer">
-                    <img src={d.icon} alt='' />
+                    <img src={icon1} alt='' />
                   </div>
                   <h2>{d.title}</h2>
                   <p>{d.desc}</p>
@@ -59,8 +59,8 @@ export default function Works() {
            
           </div> ))}
       </div>
-      <img src='assets/arrow.png' className='arrow left' alt='' onClick={()=>handleClick('left')}/>
-      <img src='assets/arrow.png' className='arrow right' alt='' onClick={()=>handleClick()}/>
+      <img src={img1} className='arrow left' alt='' onClick={()=>handleClick('left')}/>
+      <img src={img2} className='arrow right' alt='' onClick={()=>handleClick()}/>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import PortfolioList from '../portfolioList/PortfolioList'
 import './portfolio.scss'
 import '../../data'
-import {designPortfolio,  webPortfolio } from '../../data'
+import { webPortfolio } from '../../data'
 
 export default function Portfolio() {
   const [selected, setSelected] = useState('web')
@@ -14,10 +14,7 @@ export default function Portfolio() {
       title: 'Web App'
     },
   
-    {
-      id: 'design',
-      title: 'Design'
-    },
+  
   
   
   ];
@@ -28,9 +25,7 @@ export default function Portfolio() {
         setData(webPortfolio);
         break;
     
-      case 'design':
-        setData(designPortfolio);
-        break;
+     
   
       default: setData(webPortfolio)
         
@@ -50,13 +45,16 @@ export default function Portfolio() {
         </ul>
       <div className="container">
         {data.map((d) => (
+     <a href={d.link} target="blank" >
           <div className="item">
-           <a href={d.link} target="blank" >
+          
           <img src={d.img} alt="" />
-         </a>
-            <h3>{d.title}</h3>
-      </div>
+      
 
+            <h3>{d.title}</h3>
+              
+      </div>
+ </a>
         ))}
          
         </div>
